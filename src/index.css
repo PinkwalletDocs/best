@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans SC', 'Noto Sans Thai', 'Noto Sans JP', 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, #4a1515 0%, #6b1f1f 50%, #4a1515 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

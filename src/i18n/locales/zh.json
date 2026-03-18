@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "pageTitle": "BEST Token - 泰国区块链协会官方治理代币",
+    "slogan": "区块链新兴战略泰国"
+  },
+  "hero": {
+    "title": "泰国区块链协会 BEST 正式推出官方治理代币 $BEST！",
+    "description": "BEST（Blockchain Emergence Strategy Thailand）作为泰国政府支持的区块链创新协会，长期致力于推动区块链技术在金融、数字资产、贸易及产业升级领域的深度融合。今日，我们正式发布 $BEST 代币，标志着协会从「政策倡导者」升级为「生态建设者」。"
+  },
+  "presale": {
+    "title": "预售",
+    "progress": "预售进度",
+    "deadline": "预售截止时间",
+    "amount": "预售金额 (USDT)",
+    "receive": "获得代币数量",
+    "minAmount": "最低参与额度 1000 USDT",
+    "connectWallet": "连接钱包参与",
+    "participate": "参与预售",
+    "price": "预售价格",
+    "priceValue": "1 USDT = 100 $BEST",
+    "totalAllocation": "预售总量",
+    "totalValue": "50,000,000 $BEST",
+    "chain": "支付网络",
+    "chainValue": "BNB Chain (BEP-20)"
+  },
+  "tokenFunctions": {
+    "title": "代币功能",
+    "governance": "治理投票：决定协会活动优先级、合作伙伴选择",
+    "events": "活动特权：优先参与 SIAM FRONTIER CAPITAL EXPO、泰国区块链周 VIP 门票、闭门路演",
+    "staking": "生态激励：Staking 赚取收益 + 服务费折扣 + 合作伙伴项目空投",
+    "empower": "赋能社区：让社区与官方共同决策，推动区块链与传统金融的融合创新",
+    "connect": "连接全球：助力优秀项目直通纳斯达克资本体系，实现「币股联动」"
+  },
+  "tokenomics": {
+    "title": "代币经济学",
+    "name": "代币名称",
+    "nameValue": "BEST Token",
+    "symbol": "符号",
+    "symbolValue": "$BEST",
+    "supply": "总供应量",
+    "supplyValue": "1,000,000,000（10亿枚，固定上限，不可增发）",
+    "chain": "区块链",
+    "chainValue": "首发 BSC（Binance Smart Chain）",
+    "liquidity": "初始流动性",
+    "liquidityValue": "上线 Binance、OKX、Coinbase 等一线交易所，锁定 1-2 年",
+    "allocation": "分配比例（透明锁仓机制）",
+    "community": "社区激励 & 空投：40%（400,000,000）",
+    "communityDesc": "直接空投给协会会员、峰会参与者、早期贡献者",
+    "liquidityPool": "流动性池：20%（200,000,000）",
+    "liquidityPoolDesc": "上线即提供 LP，1 年线性解锁",
+    "team": "团队 & 顾问：15%（150,000,000）",
+    "teamDesc": "4 年线性 vesting（每季度解锁 6.25%），防 dump",
+    "marketing": "营销 & 合作伙伴：10%（100,000,000）",
+    "marketingDesc": "用于 KOL、交易所合作、跨链激励",
+    "treasury": "协会 Treasury（金库）& 开发基金：15%（150,000,000）",
+    "treasuryDesc": "用于峰会赞助、项目孵化、法律合规，DAO 治理投票使用"
+  },
+  "utility": {
+    "title": "核心用途 & 实用性",
+    "governance": "治理：持有 $BEST 可提案并投票协会重大决策",
+    "staking": "Staking 收益：锁定 $BEST 赚取 APY（初始 15-30%）",
+    "events": "活动特权：持仓达一定数量可获泰国区块链周 VIP 门票",
+    "discount": "服务费折扣：使用 $BEST 支付可享 20-50% 折扣",
+    "partners": "合作伙伴激励：持有者可获项目空投与优先投资权"
+  },
+  "deflation": {
+    "title": "通缩 & 增值机制",
+    "tax": "交易税：每笔 4%（1% 自动 burn、1% 回流 LP、1% Staking 奖励池、1% Treasury）",
+    "buyback": "回购销毁：协会收入 30% 用于公开市场回购并销毁",
+    "effect": "预期效果：长期供应减少，价值与协会活动规模正相关"
+  },
+  "roadmap": {
+    "title": "路线图",
+    "q1": "Q1 2026：合约审计 + 社区空投 + 泰国区块链周专属权益",
+    "q2": "Q2 2026：Staking 池上线 + 交易所上线",
+    "q3": "Q3 2026：多链桥接 + DAO 治理平台上线",
+    "q4": "Q4 2026：与纳斯达克概念项目深度绑定，推出 $BEST 支付结算系统"
+  },
+  "partners": {
+    "title": "合作伙伴",
+    "goldSponsor": "金牌赞助商",
+    "goldSponsors": "Binance · OKX · 非小号 (Feixiaohao)"
+  },
+  "footer": {
+    "contact": "联系我们",
+    "twitter": "关注 Twitter"
+  },
+  "wallet": {
+    "connect": "连接钱包",
+    "disconnect": "断开连接",
+    "wrongNetwork": "请切换到 BNB 链",
+    "switchNetwork": "切换网络",
+    "usdtBalance": "USDT 余额",
+    "chain": "当前链"
+  },
+  "errors": {
+    "minAmount": "最低参与金额为 1000 USDT",
+    "approve": "请先授权 USDT",
+    "network": "请连接 BNB 链"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "pageTitle": "BEST Token - タイブロックチェーン協会公式ガバナンストークン",
+    "slogan": "ブロックチェーン・エマージェンス・ストラテジー・タイ"
+  },
+  "hero": {
+    "title": "タイブロックチェーン協会 BEST、公式ガバナンストークン $BEST を正式リリース！",
+    "description": "BEST（Blockchain Emergence Strategy Thailand）は、タイ政府が支援するブロックチェーンイノベーション協会として、金融・デジタル資産・貿易・産業アップグレードにおけるブロックチェーン技術の深度融合の推進に長年取り組んできました。本日、$BEST トークンを正式にリリースし、協会が「政策提唱者」から「エコシステムビルダー」へと進化したことを示します。"
+  },
+  "presale": {
+    "title": "プレセール",
+    "progress": "プレセール進捗",
+    "deadline": "プレセール締切",
+    "amount": "参加額 (USDT)",
+    "receive": "受け取るトークン数",
+    "minAmount": "最低 1000 USDT",
+    "connectWallet": "ウォレットを接続して参加",
+    "participate": "プレセールに参加",
+    "price": "プレセール価格",
+    "priceValue": "1 USDT = 100 $BEST",
+    "totalAllocation": "プレセール配分",
+    "totalValue": "50,000,000 $BEST",
+    "chain": "決済ネットワーク",
+    "chainValue": "BNB Chain (BEP-20)"
+  },
+  "tokenFunctions": {
+    "title": "トークン機能",
+    "governance": "ガバナンス投票：活動優先度・パートナー選定を決定",
+    "events": "イベント特典：SIAM FRONTIER CAPITAL EXPO、Thailand Blockchain Week VIP チケット優先参加",
+    "staking": "エコシステムインセンティブ：Staking 報酬 + 手数料割引 + パートナープロジェクトエアドロップ",
+    "empower": "コミュニティ強化：協会と共同で意思決定、ブロックチェーンと従来金融の統合を推進",
+    "connect": "グローバル接続：Nasdaq資本システムへのプロジェクト支援"
+  },
+  "tokenomics": {
+    "title": "トークノミクス",
+    "name": "トークン名",
+    "nameValue": "BEST Token",
+    "symbol": "シンボル",
+    "symbolValue": "$BEST",
+    "supply": "総供給量",
+    "supplyValue": "1,000,000,000（10億、固定上限、インフレなし）",
+    "chain": "ブロックチェーン",
+    "chainValue": "BSC（Binance Smart Chain）でローンチ",
+    "liquidity": "初期流動性",
+    "liquidityValue": "Binance、OKX、Coinbase上場、LP 1-2年ロック",
+    "allocation": "分配（透明ベスティング）",
+    "community": "コミュニティ＆エアドロップ：40%（400,000,000）",
+    "communityDesc": "会員・サミット参加者・初期貢献者へ直接エアドロップ",
+    "liquidityPool": "流動性プール：20%（200,000,000）",
+    "liquidityPoolDesc": "ローンチ時LP、1年リニアアンロック",
+    "team": "チーム＆アドバイザー：15%（150,000,000）",
+    "teamDesc": "4年リニアベスティング（四半期6.25%）、アンチダンプ",
+    "marketing": "マーケティング＆パートナー：10%（100,000,000）",
+    "marketingDesc": "KOL、取引所提携、クロスチェンインセンティブ",
+    "treasury": "財庫＆開発：15%（150,000,000）",
+    "treasuryDesc": "サミットスポンサー、プロジェクトインキュベーション、法務コンプライアンス、DAOガバナンス"
+  },
+  "utility": {
+    "title": "コアユーティリティ",
+    "governance": "ガバナンス：重要決定の提案・投票",
+    "staking": "Staking報酬：$BESTをロックで15-30% APY",
+    "events": "イベント特典：Thailand Blockchain Week VIPチケット",
+    "discount": "手数料割引：$BEST支払いで20-50%オフ",
+    "partners": "パートナーインセンティブ：エアドロップ・優先用投資権"
+  },
+  "deflation": {
+    "title": "デフレ＆価値メカニズム",
+    "tax": "取引税：取引ごと4%（1% burn、1% LP、1% Staking、1% Treasury）",
+    "buyback": "買い戻し＆ burn：協会収入30%を市場買い戻しに充当",
+    "effect": "長期的な供給減少、価値は協会活動規模に比例"
+  },
+  "roadmap": {
+    "title": "ロードマップ",
+    "q1": "Q1 2026：契約監査＋コミュニティエアドロップ＋Thailand Blockchain Week限定特典",
+    "q2": "Q2 2026：Stakingプール＋取引所上場",
+    "q3": "Q3 2026：クロスチェンブリッジ＋DAOガバナンスプラットフォーム",
+    "q4": "Q4 2026：Nasdaqコンセプトプロジェクト連携、$BEST決済システム"
+  },
+  "partners": {
+    "title": "パートナー",
+    "goldSponsor": "ゴールドスポンサー",
+    "goldSponsors": "Binance · OKX · Feixiaohao"
+  },
+  "footer": {
+    "contact": "お問い合わせ",
+    "twitter": "Twitterフォロー"
+  },
+  "wallet": {
+    "connect": "ウォレット接続",
+    "disconnect": "接続解除",
+    "wrongNetwork": "BNB Chainに切り替えてください",
+    "switchNetwork": "ネットワーク切替",
+    "usdtBalance": "USDT残高",
+    "chain": "ネットワーク"
+  },
+  "errors": {
+    "minAmount": "最低金額は1000 USDTです",
+    "approve": "先にUSDTを承認してください",
+    "network": "BNB Chainに接続してください"
+  }
+}
