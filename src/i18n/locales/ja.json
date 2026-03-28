@@ -13,7 +13,7 @@
     "deadline": "プレセール締切",
     "amount": "参加額 (USDT)",
     "receive": "受け取るトークン数",
-    "minAmount": "最低 1000 USDT",
+    "minAmount": "最低 0 USDT",
     "connectWallet": "ウォレットを接続して参加",
     "participate": "プレセールに参加",
     "price": "プレセール価格",
@@ -21,7 +21,10 @@
     "totalAllocation": "プレセール配分",
     "totalValue": "50,000,000 $BEST",
     "chain": "決済ネットワーク",
-    "chainValue": "BNB Chain (BEP-20)"
+    "chainValue": "BNB Chain (BEP-20)",
+    "usdtContract": "USDT コントラクト (BEP-20)",
+    "depositContract": "プレセール入金（プロキシ）コントラクト",
+    "paymentHint": "標準の BEP-20 USDT 送金です。ウォレットには公式 USDT コントラクトへの呼び出しが表示され、送金先はオンチェーンのプレセール入金コントラクトです（個人アドレスではありません）。承認は不要です。"
   },
   "tokenFunctions": {
     "title": "トークン機能",
@@ -94,8 +97,9 @@
     "chain": "ネットワーク"
   },
   "errors": {
-    "minAmount": "最低金額は1000 USDTです",
+    "minAmount": "有効な金額を入力してください（最低 0 USDT）",
     "approve": "先にUSDTを承認してください",
-    "network": "BNB Chainに接続してください"
+    "network": "BNB Chainに接続してください",
+    "presaleNotConfigured": "プレセールの送金先設定が無効です。"
   }
 }

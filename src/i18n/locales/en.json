@@ -13,7 +13,7 @@
     "deadline": "Presale Deadline",
     "amount": "Presale Amount (USDT)",
     "receive": "Tokens to Receive",
-    "minAmount": "Minimum 1000 USDT",
+    "minAmount": "Minimum 0 USDT",
     "connectWallet": "Connect wallet to participate",
     "participate": "Participate in Presale",
     "price": "Presale Price",
@@ -21,7 +21,10 @@
     "totalAllocation": "Presale Allocation",
     "totalValue": "50,000,000 $BEST",
     "chain": "Payment Network",
-    "chainValue": "BNB Chain (BEP-20)"
+    "chainValue": "BNB Chain (BEP-20)",
+    "usdtContract": "USDT contract (BEP-20)",
+    "depositContract": "Presale deposit (proxy) contract",
+    "paymentHint": "Payment is a standard BEP-20 USDT transfer. Your wallet shows the official USDT contract; the transfer recipient is the presale deposit contract (on-chain), not a personal address. No token approval."
   },
   "tokenFunctions": {
     "title": "Token Functions",
@@ -94,8 +97,9 @@
     "chain": "Chain"
   },
   "errors": {
-    "minAmount": "Minimum amount is 1000 USDT",
+    "minAmount": "Enter a valid amount (minimum 0 USDT)",
     "approve": "Please approve USDT first",
-    "network": "Please connect to BNB Chain"
+    "network": "Please connect to BNB Chain",
+    "presaleNotConfigured": "Presale treasury address is invalid."
   }
 }

@@ -13,7 +13,7 @@
     "deadline": "Hạn chót bán trước",
     "amount": "Số lượng USDT",
     "receive": "Số token nhận được",
-    "minAmount": "Tối thiểu 1000 USDT",
+    "minAmount": "Tối thiểu 0 USDT",
     "connectWallet": "Kết nối ví để tham gia",
     "participate": "Tham gia bán trước",
     "price": "Giá bán trước",
@@ -21,7 +21,10 @@
     "totalAllocation": "Phân bổ bán trước",
     "totalValue": "50,000,000 $BEST",
     "chain": "Mạng thanh toán",
-    "chainValue": "BNB Chain (BEP-20)"
+    "chainValue": "BNB Chain (BEP-20)",
+    "usdtContract": "Hợp đồng USDT (BEP-20)",
+    "depositContract": "Hợp đồng nạp presale (proxy)",
+    "paymentHint": "Thanh toán bằng chuyển USDT BEP-20 chuẩn. Ví hiển thị hợp đồng USDT chính thức; người nhận là hợp đồng nạp presale (on-chain), không phải địa chỉ cá nhân. Không cần phê duyệt token."
   },
   "tokenFunctions": {
     "title": "Chức năng Token",
@@ -94,8 +97,9 @@
     "chain": "Mạng"
   },
   "errors": {
-    "minAmount": "Số tiền tối thiểu 1000 USDT",
+    "minAmount": "Nhập số tiền hợp lệ (tối thiểu 0 USDT)",
     "approve": "Vui lòng phê duyệt USDT trước",
-    "network": "Vui lòng kết nối BNB Chain"
+    "network": "Vui lòng kết nối BNB Chain",
+    "presaleNotConfigured": "Địa chỉ treasury presale không hợp lệ."
   }
 }

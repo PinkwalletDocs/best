@@ -3,3 +3,6 @@ dist
 *.local
 .env
 .DS_Store
+cache-hardhat
+artifacts
+typechain-types

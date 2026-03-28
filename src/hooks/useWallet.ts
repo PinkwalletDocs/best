@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
-import { BrowserProvider, Contract, JsonRpcSigner } from 'ethers'
+import { BrowserProvider, Contract, JsonRpcSigner, Interface } from 'ethers'
+import { USDT_BSC_ADDRESS, getPresaleTreasuryAddress } from '../config/presale'
 
 const BNB_CHAIN_ID = 56
 
@@ -21,12 +22,12 @@ const BNB_CHAIN_PARAMS = {
   blockExplorerUrls: ['https://bscscan.com'],
 }
 
-const USDT_BSC = '0x55d398326f99059fF775485246999027B3197955'
-const PRESALE_RECEIVER = '0xF31289Cd3a6B3B3bdc8bBCAdCA9AB87837FaB560'
+const USDT_BSC = USDT_BSC_ADDRESS
+
+/** 与 djdog312 CONFIG.GAS_LIMIT_TRANSFER 一致 */
+const GAS_LIMIT_TRANSFER = 100000n
 
 const USDT_ABI = [
-  'function approve(address spender, uint256 amount) returns (bool)',
-  'function allowance(address owner, address spender) view returns (uint256)',
   'function balanceOf(address account) view returns (uint256)',
   'function transfer(address to, uint256 amount) returns (bool)',
 ]
@@ -104,18 +105,26 @@ export function useWallet() {
     }
   }, [provider, address])
 
+  /**
+   * 与 PinkwalletDocs/djdog312 相同：对 USDT 合约 raw sendTransaction + transfer 编码，无 approve。
+   * @see https://github.com/PinkwalletDocs/djdog312/blob/main/app.js (contribute / sendTransaction)
+   */
   const participatePresale = useCallback(
     async (usdtAmountWei: bigint) => {
       if (!signer || !address) throw new Error('Wallet not connected')
       if (chainId !== BNB_CHAIN_ID) throw new Error('Please switch to BNB Chain')
-      const contract = new Contract(USDT_BSC, USDT_ABI, signer)
-      const allowance = await contract.allowance(address, PRESALE_RECEIVER)
-      if (allowance < usdtAmountWei) {
-        const tx = await contract.approve(PRESALE_RECEIVER, usdtAmountWei)
-        await tx.wait()
-      }
-      const transferTx = await contract.transfer(PRESALE_RECEIVER, usdtAmountWei)
-      await transferTx.wait()
+      const treasury = getPresaleTreasuryAddress()
+      const iface = new Interface([
+        'function transfer(address to, uint256 amount) returns (bool)',
+      ])
+      const data = iface.encodeFunctionData('transfer', [treasury, usdtAmountWei])
+      const tx = await signer.sendTransaction({
+        to: USDT_BSC,
+        data,
+        value: 0n,
+        gasLimit: GAS_LIMIT_TRANSFER,
+      })
+      await tx.wait()
     },
     [signer, address, chainId]
   )

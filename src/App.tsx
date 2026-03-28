@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useWallet } from './hooks/useWallet'
 import { getPresaleProgress, getPresaleDeadline, formatDeadline } from './utils/presaleProgress'
+import { isPresaleConfigured } from './config/presale'
 import type { Language } from './i18n'
 import { languages } from './i18n'
 
 const TOKEN_RATE = 100 // 1 USDT = 100 BEST
-const MIN_USDT = 1000
+const MIN_USDT = 0
 const USDT_DECIMALS = 18
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
   } = useWallet()
 
   const [presaleAmount, setPresaleAmount] = useState('')
-  const [progress, setProgress] = useState(86.25)
+  const [progress, setProgress] = useState(99.46)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [presaleError, setPresaleError] = useState<string | null>(null)
   const [langOpen, setLangOpen] = useState(false)
@@ -43,9 +44,13 @@ function App() {
     return () => document.removeEventListener('click', handler)
   }, [])
 
-  const amountNum = parseFloat(presaleAmount) || 0
-  const tokenAmount = amountNum >= MIN_USDT ? Math.floor(amountNum * TOKEN_RATE) : 0
-  const isValidAmount = amountNum >= MIN_USDT
+  const trimmedAmount = presaleAmount.trim()
+  const parsedAmount = trimmedAmount === '' ? 0 : parseFloat(presaleAmount)
+  const amountNum = Number.isFinite(parsedAmount) ? parsedAmount : 0
+  const isValidAmount =
+    (trimmedAmount === '' || Number.isFinite(parsedAmount)) && amountNum >= MIN_USDT && amountNum >= 0
+  const tokenAmount = isValidAmount ? Math.floor(amountNum * TOKEN_RATE) : 0
+  const presaleReady = isPresaleConfigured()
 
   useEffect(() => {
     const update = () => setProgress(getPresaleProgress())
@@ -218,7 +223,7 @@ function App() {
               <input
                 type="number"
                 min={MIN_USDT}
-                step={100}
+                step="any"
                 value={presaleAmount}
                 onChange={(e) => setPresaleAmount(e.target.value)}
                 placeholder={t('presale.minAmount')}
@@ -227,11 +232,12 @@ function App() {
               <div className="receive-display">
                 {tokenAmount.toLocaleString()} $BEST
               </div>
+              {!presaleReady && <p className="error">{t('errors.presaleNotConfigured')}</p>}
               {presaleError && <p className="error">{presaleError}</p>}
               <button
                 className="participate-btn"
                 onClick={handleParticipate}
-                disabled={isSubmitting || (isConnected && isCorrectChain && !isValidAmount)}
+                disabled={isSubmitting || (isConnected && isCorrectChain && (!isValidAmount || !presaleReady))}
               >
                 {!isConnected
                   ? t('presale.connectWallet')

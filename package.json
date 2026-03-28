@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "compile:contracts": "hardhat compile",
+    "deploy:presale:bsc": "hardhat run scripts/deploy-presale-proxy.cjs --network bsc",
+    "deploy:presale:testnet": "hardhat run scripts/deploy-presale-proxy.cjs --network bscTestnet",
+    "keeper:forward": "node scripts/keeper-forward-usdt.cjs",
+    "keeper:once": "node scripts/keeper-forward-usdt.cjs --once"
   },
   "dependencies": {
     "ethers": "^6.9.0",
@@ -16,9 +21,12 @@
     "i18next": "^23.7.0"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0",
     "vite": "^5.0.8",
     "typescript": "^5.2.2"
   }

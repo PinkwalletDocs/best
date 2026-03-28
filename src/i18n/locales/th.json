@@ -13,7 +13,7 @@
     "deadline": "วันปิดการขายล่วงหน้า",
     "amount": "จำนวน USDT",
     "receive": "จำนวนโทเคนที่จะได้รับ",
-    "minAmount": "ขั้นต่ำ 1000 USDT",
+    "minAmount": "ขั้นต่ำ 0 USDT",
     "connectWallet": "เชื่อมต่อกระเป๋าเพื่อเข้าร่วม",
     "participate": "เข้าร่วมการขายล่วงหน้า",
     "price": "ราคาขายล่วงหน้า",
@@ -21,7 +21,10 @@
     "totalAllocation": "การจัดสรรการขายล่วงหน้า",
     "totalValue": "50,000,000 $BEST",
     "chain": "เครือข่ายการชำระเงิน",
-    "chainValue": "BNB Chain (BEP-20)"
+    "chainValue": "BNB Chain (BEP-20)",
+    "usdtContract": "สัญญา USDT (BEP-20)",
+    "depositContract": "สัญญารับฝากพรีเซล (พร็อกซี)",
+    "paymentHint": "การชำระเงินเป็นการโอน USDT มาตรฐาน BEP-20 กระเป๋าแสดงสัญญา USDT อย่างเป็นทางการ ผู้รับคือสัญญารับฝากพรีเซล (ออนเชน) ไม่ใช่ที่อยู่ส่วนบุคคล ไม่ต้องอนุมัติโทเคน"
   },
   "tokenFunctions": {
     "title": "ฟังก์ชันโทเคน",
@@ -94,8 +97,9 @@
     "chain": "เครือข่าย"
   },
   "errors": {
-    "minAmount": "จำนวนขั้นต่ำ 1000 USDT",
+    "minAmount": "กรุณากรอกจำนวนที่ถูกต้อง (ขั้นต่ำ 0 USDT)",
     "approve": "กรุณาอนุมัติ USDT ก่อน",
-    "network": "กรุณาเชื่อมต่อ BNB Chain"
+    "network": "กรุณาเชื่อมต่อ BNB Chain",
+    "presaleNotConfigured": "ที่อยู่ treasury ของพรีเซลไม่ถูกต้อง"
   }
 }

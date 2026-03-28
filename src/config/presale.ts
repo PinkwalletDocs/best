@@ -1,0 +1,33 @@
+/** BNB Chain official USDT (BEP-20) */
+export const USDT_BSC_ADDRESS = '0x55d398326f99059fF775485246999027B3197955' as const
+
+/** 预售 USDT 直接转入的金库地址（与 djdog312 的 CONFIG.TREASURY 同级） */
+export const PRESALE_TREASURY_ADDRESS =
+  '0xc71561fAAA3Ac1070878D69A51e33F412DD8208e' as const
+
+const ZERO = '0x0000000000000000000000000000000000000000'
+
+function isValidEvmAddress(a: string): boolean {
+  return /^0x[a-fA-F0-9]{40}$/.test(a) && a.toLowerCase() !== ZERO
+}
+
+function resolveTreasury(): string | null {
+  const raw = import.meta.env.VITE_PRESALE_TREASURY_ADDRESS?.trim()
+  if (raw && isValidEvmAddress(raw)) return raw
+  if (isValidEvmAddress(PRESALE_TREASURY_ADDRESS)) return PRESALE_TREASURY_ADDRESS
+  return null
+}
+
+export function isPresaleConfigured(): boolean {
+  return resolveTreasury() !== null
+}
+
+export function getPresaleTreasuryAddress(): string {
+  const t = resolveTreasury()
+  if (!t) throw new Error('Invalid presale treasury address.')
+  return t
+}
+
+/** 旧版合约池（仅 Keeper / Hardhat 使用） */
+export const DEFAULT_PRESALE_DEPOSIT_CONTRACT =
+  '0x01bFa33D4A3101EA741ED4AE609c397d0c8Dad51' as const

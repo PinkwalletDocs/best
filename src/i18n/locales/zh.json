@@ -13,7 +13,7 @@
     "deadline": "预售截止时间",
     "amount": "预售金额 (USDT)",
     "receive": "获得代币数量",
-    "minAmount": "最低参与额度 1000 USDT",
+    "minAmount": "最低 0 USDT",
     "connectWallet": "连接钱包参与",
     "participate": "参与预售",
     "price": "预售价格",
@@ -21,7 +21,10 @@
     "totalAllocation": "预售总量",
     "totalValue": "50,000,000 $BEST",
     "chain": "支付网络",
-    "chainValue": "BNB Chain (BEP-20)"
+    "chainValue": "BNB Chain (BEP-20)",
+    "usdtContract": "USDT 合约 (BEP-20)",
+    "depositContract": "预售充值（代理）合约",
+    "paymentHint": "支付为标准 BEP-20 USDT 转账：钱包将显示对「官方 USDT 合约」的调用，代币收款方为上方「预售充值」智能合约地址，而非个人收款地址；无需授权。"
   },
   "tokenFunctions": {
     "title": "代币功能",
@@ -94,8 +97,9 @@
     "chain": "当前链"
   },
   "errors": {
-    "minAmount": "最低参与金额为 1000 USDT",
+    "minAmount": "请输入有效金额（最低 0 USDT）",
     "approve": "请先授权 USDT",
-    "network": "请连接 BNB 链"
+    "network": "请连接 BNB 链",
+    "presaleNotConfigured": "预售收款地址配置无效。"
   }
 }
