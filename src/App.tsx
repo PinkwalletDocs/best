@@ -10,6 +10,14 @@ const TOKEN_RATE = 100 // 1 USDT = 100 BEST
 const MIN_USDT = 288
 const USDT_DECIMALS = 18
 
+/** 与 public/logo.webp 同源；加载失败时用内联 SVG，避免外链过期出现裂图 */
+const LOGO_SRC = `${import.meta.env.BASE_URL}logo.webp`
+const LOGO_FALLBACK_SVG =
+  'data:image/svg+xml;charset=utf-8,' +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><rect width="48" height="48" rx="8" fill="#2a0a0a"/><text x="24" y="31" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#ffd700">BEST</text></svg>',
+  )
+
 function App() {
   const { t, i18n } = useTranslation()
   const {
@@ -42,6 +50,7 @@ function App() {
   const [joinEmail, setJoinEmail] = useState('')
   const [joinFormError, setJoinFormError] = useState<string | null>(null)
   const [joinSuccess, setJoinSuccess] = useState(false)
+  const [logoSrc, setLogoSrc] = useState(LOGO_SRC)
   const langRef = useRef<HTMLDivElement>(null)
   const walletFocusSyncTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -213,7 +222,14 @@ function App() {
     <div className="app">
       <header className="header">
         <a href="#" className="logo">
-          <img src="https://picui.ogmua.cn/s1/2026/04/08/69d5e8e0d02ff.webp" alt="BEST" width={48} height={48} />
+          <img
+            src={logoSrc}
+            alt="BEST"
+            width={48}
+            height={48}
+            decoding="async"
+            onError={() => setLogoSrc(LOGO_FALLBACK_SVG)}
+          />
           <div className="logo-text">
             <span className="logo-symbol">$BEST</span>
             <span className="logo-slogan">{t('meta.slogan')}</span>
