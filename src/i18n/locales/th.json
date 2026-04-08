@@ -84,10 +84,6 @@
     "goldSponsor": "ผู้สนับสนุนทอง",
     "goldSponsors": "Binance · OKX · Feixiaohao"
   },
-  "footer": {
-    "contact": "ติดต่อเรา",
-    "twitter": "ติดตาม Twitter"
-  },
   "wallet": {
     "connect": "เชื่อมต่อกระเป๋า",
     "disconnect": "ตัดการเชื่อมต่อ",

@@ -326,13 +326,6 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
-        <a href="https://x.com/fxh_crypto/status/2029962521374015640?s=20" target="_blank" rel="noopener noreferrer">
-          {t('footer.twitter')}
-        </a>
-        <span>{t('footer.contact')}</span>
-      </footer>
-
       {error && <div className="toast error">{error}</div>}
 
       <style>{`
@@ -489,17 +482,6 @@ function App() {
           border-radius: 8px;
           font-size: 0.9rem;
         }
-
-        .footer {
-          text-align: center;
-          padding: 2rem;
-          border-top: 1px solid rgba(255,255,255,0.2);
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-        .footer a { text-decoration: underline; }
-        .footer a:hover { opacity: 0.8; }
 
         .toast {
           position: fixed;

@@ -84,10 +84,6 @@
     "goldSponsor": "金牌赞助商",
     "goldSponsors": "Binance · OKX · 非小号 (Feixiaohao)"
   },
-  "footer": {
-    "contact": "联系我们",
-    "twitter": "关注 Twitter"
-  },
   "wallet": {
     "connect": "连接钱包",
     "disconnect": "断开连接",

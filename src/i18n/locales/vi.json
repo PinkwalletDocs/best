@@ -84,10 +84,6 @@
     "goldSponsor": "Nhà tài trợ vàng",
     "goldSponsors": "Binance · OKX · Feixiaohao"
   },
-  "footer": {
-    "contact": "Liên hệ",
-    "twitter": "Theo dõi Twitter"
-  },
   "wallet": {
     "connect": "Kết nối ví",
     "disconnect": "Ngắt kết nối",

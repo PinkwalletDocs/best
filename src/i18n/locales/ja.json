@@ -84,10 +84,6 @@
     "goldSponsor": "ゴールドスポンサー",
     "goldSponsors": "Binance · OKX · Feixiaohao"
   },
-  "footer": {
-    "contact": "お問い合わせ",
-    "twitter": "Twitterフォロー"
-  },
   "wallet": {
     "connect": "ウォレット接続",
     "disconnect": "接続解除",
